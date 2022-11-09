@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <tr th:each="user: ${user}">
+  <td th:utext="${user.getId()}">Oranges</td>
+    <br/>
+  <td th:utext="${user.getFirstName()}">Oranges</td>
+    <br/>
+  <td th:utext="${user.getLastName()}">Oranges</td>
+    <br/>
+  <td th:utext="${user.getEmail()}">Oranges</td>
+    <br/>
+</tr>
+
+</body>
+</html>
