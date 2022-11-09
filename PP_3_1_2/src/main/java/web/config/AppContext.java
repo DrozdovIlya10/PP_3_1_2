@@ -25,6 +25,7 @@ public class AppContext {
 
     @Autowired
     private Environment environment;
+
     @Bean
     public LocalContainerEntityManagerFactoryBean entityManagerFactoryBean() {
         LocalContainerEntityManagerFactoryBean em = new LocalContainerEntityManagerFactoryBean();
