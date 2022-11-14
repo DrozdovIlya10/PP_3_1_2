@@ -13,13 +13,13 @@ public class UserDaoImp implements UserDao {
     private EntityManager entityManager;
 
     @Override
-    public void add(User user) {
+    public void getUserForAdd(User user) {
         entityManager.persist(user);
         entityManager.flush();
     }
 
     @Override
-    public void delete(Long id) {
+    public void getIdForDelete(Long id) {
         User user = entityManager.find(User.class, id);
         entityManager.remove(user);
     }
@@ -32,14 +32,14 @@ public class UserDaoImp implements UserDao {
     }
 
     @Override
-    public User showUser(long id) {
+    public User getIdForUser(long id) {
         User user = entityManager.find(User.class, id);
         entityManager.detach(user);
         return user;
     }
 
     @Override
-    public void update(long id, User user2) {
+    public void getIdAndUserForUpdate(long id, User user2) {
         entityManager.merge(user2);
     }
 
