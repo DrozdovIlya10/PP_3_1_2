@@ -9,15 +9,15 @@
 <body>
 
 <div>
-    <table border="1" >
+    <table border="1">
         <thead>
         <tr>
-            <th> Id </th>
-            <th> Name </th>
-            <th> Lastname </th>
-            <th> Email </th>
-            <th> Edit </th>
-            <th> Delete </th>
+            <th> Id</th>
+            <th> Name</th>
+            <th> Lastname</th>
+            <th> Email</th>
+            <th> Edit</th>
+            <th> Delete</th>
         </tr>
         </thead>
         <tbody>
@@ -26,8 +26,9 @@
             <td th:utext="${user.getFirstName()}">Oranges</td>
             <td th:utext="${user.getLastName()}">Oranges</td>
             <td th:utext="${user.getEmail()}">Oranges</td>
-            <td> <a th:href="@{{id}/edit(id = ${user.getId()})}"> Edit </a> </td>
-            <td> <form  th:method="DELETE" th:action="@{/{id}(id = ${user.getId()})}">
+            <td><a th:href="@{{id}/edit(id = ${user.getId()})}"> Edit </a></td>
+            <td>
+                <form th:method="DELETE" th:action="@{/{id}(id = ${user.getId()})}">
                     <input type="submit" value="Delete"/>
                 </form>
             </td>
@@ -36,7 +37,7 @@
     </table>
     <a> _________________________________ </a>
     <br/>
-    <a href="new"> New User  </a>
+    <a href="new"> New User </a>
 </div>
 
 </body>

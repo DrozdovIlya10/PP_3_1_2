@@ -6,17 +6,17 @@
 </head>
 <body>
 
-<form th:method="PATCH" th:action="@{/{id}(id = ${user.getId()})}" th:object="${user}" >
-    <label for="firstName" > Enter name: </label>
+<form th:method="PATCH" th:action="@{/{id}(id = ${user.getId()})}" th:object="${user}">
+    <label for="firstName"> Enter name: </label>
     <input type="text" th:field="*{firstName}" id="firstName"/>
     <br/>
-    <label for="lastName" > Enter lastname: </label>
+    <label for="lastName"> Enter lastname: </label>
     <input type="text" th:field="*{lastName}" id="lastName"/>
     <br/>
-    <label for="email" > Enter email: </label>
+    <label for="email"> Enter email: </label>
     <input type="text" th:field="*{email}" id="email"/>
     <br/>
-    <input type="submit" value="Update!" />
+    <input type="submit" value="Update!"/>
 
 </form>
 </body>
