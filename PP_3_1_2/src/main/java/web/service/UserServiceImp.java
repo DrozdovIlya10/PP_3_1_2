@@ -8,6 +8,7 @@ import web.model.User;
 import java.util.List;
 
 @Service
+@Transactional(readOnly = true)
 public class UserServiceImp implements UserService {
 
     private final UserDao userDao;
@@ -28,13 +29,11 @@ public class UserServiceImp implements UserService {
         userDao.setUserForSave(user);
     }
 
-    @Transactional(readOnly = true)
     @Override
     public List<User> getListUsers() {
         return userDao.getListUsers();
     }
 
-    @Transactional
     @Override
     public User getUserById(long id) {
         return userDao.getUserById(id);
